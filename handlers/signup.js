@@ -33,8 +33,6 @@ const execute = async (variables, reqHeaders) => {
 const signup = async (req, res) => {
   const { name, email, password } = req.body.input.arg1
 
-  console.log(req.body.input)
-
   let hashedPassword = await bcrypt.hash(password, 10);
 
   // execute the Hasura operation
@@ -42,6 +40,7 @@ const signup = async (req, res) => {
 
   // if Hasura operation errors, then throw error
   if (errors) {
+    console.log(errors)
     return res.status(400).json({
       message: errors.message
     })
