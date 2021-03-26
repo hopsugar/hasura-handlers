@@ -35,6 +35,8 @@ const signup = async (req, res) => {
 
   let hashedPassword = await bcrypt.hash(password, 10);
 
+  console.log(req.headers)
+
   // execute the Hasura operation
   const { data, errors } = await execute({ name, email, password: hashedPassword }, req.headers);
 
