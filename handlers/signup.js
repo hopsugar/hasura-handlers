@@ -30,7 +30,7 @@ const execute = async (variables, reqHeaders) => {
 };
 
 const signup = async (req, res) => {
-  const { name, email, password } = req.body.input
+  const { name, email, password } = req.body.input.arg1
 
   console.log(req.body.input)
 
