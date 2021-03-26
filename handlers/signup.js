@@ -1,5 +1,6 @@
 const bcrypt = require("bcryptjs")
 const jwt = require("jsonwebtoken")
+const fetch = require("node-fetch")
 
 const HASURA_OPERATION = `
 mutation ($name: String!, $email: String!, $password: String!) {
