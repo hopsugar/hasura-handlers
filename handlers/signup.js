@@ -6,7 +6,7 @@ const HASURA_OPERATION = `
 mutation ($name: String!, $email: String!, $password: String!) {
   insert_users_one(object: {
     name: $name,
-    username: $username,
+    email: $email,
     password: $password
   }) {
     id
