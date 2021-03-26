@@ -1,5 +1,6 @@
 const handler = (req, res) => {
-	console.log("it is working ifne") 
+	
+  const { email, password } = req.body.input
 
 	return res.json({
     accessToken: "<value>"
